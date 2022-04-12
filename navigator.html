@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta property="og:title" content="Navigation for Electric Vehicles">
+    <meta name="author" content="Rounak Ghosh">
+    <title>Navigation for EVs</title>
+    <link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps.css"/>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/services/services-web.min.js"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="navigator.css" />
+  </head>
+
+  <body>
+    <header>
+      <img class="logo" src="https://res.cloudinary.com/rghosh/image/upload/v1649731793/Navic/navic_qrn7zp.png" alt="logo">
+      <nav>
+          <ul class="nav_links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Navigator</a></li>
+              <li><a href="stations.html">Stations</a></li>
+          </ul>
+      </nav>
+    </header>    
+    
+    <div id="row">
+      
+      <div id="leftcolumn">     <!-- LEFT COLUMN -->
+        
+        <div id="source_div" class="container">
+          <select id="source" onChange="changeSource(this.value);">
+            <option disabled selected>---Choose Source---</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Kochi">Kochi</option>
+            <option value="Panaji">Panaji</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Ranchi">Ranchi</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Lucknow">Lucknow</option>
+          </select>
+        </div>
+        
+        <div id="destination_div" class="container">
+          <select id="destination">
+            <option disabled selected>---Choose Destination---</option>
+          </select>
+        </div>
+        <br />
+        
+        <div class="container">
+          <button onClick="routeSelection(); routeDetails()">GO</button>
+          <button onClick="history.go(0);">Re Route</button>
+        </div>
+    
+      </div>
+      
+      <div id="rightcolumn">    <!-- RIGHT COLUMN -->
+        
+        <p id="routeDisplay" class="container"></p>
+        <p id="stationDisplay" class="container"></p>
+        <p id="distanceDisplay" class="container"></p>
+        <p id="timeDisplay" class="container"></p>
+
+    
+      </div>  
+    </div>
+
+    <div id="map" class="container"></div>
+    
+    <script src="navigator.js" type="text/javascript"></script>
+    <script>  
+      function myFunction(){
+        preloader.style.display = 'none';
+      };
+    </script>
+  </body>
+</html>

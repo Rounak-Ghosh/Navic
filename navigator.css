@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    max-height: 100%;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    background-color: #181918;
+    place-items: center;
+}
+
+body::-webkit-scrollbar { /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+nav, header, .nav_links, li{
+    background-color: #222223;
+}
+
+.logo{
+      width: auto;
+      height: 50px;
+      background-color: inherit;
+      cursor: pointer;
+      margin-right: auto;
+}
+
+li, a {
+    font-family: "Montserrat", sans-serif;
+    font-family: 400;
+    font-size: 16px;
+    color: #ededed;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.nav_links{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #2248D1;
+    text-decoration: none;
+}
+
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#leftcolumn {   
+    float: left;
+    width: 50%;
+    padding: 10px 10%;
+  }
+  
+#rightcolumn {
+    float: left;
+    width: 50%;
+    padding: 20px 0 10px 0;
+}
+
+@media screen and (max-width: 850px) {
+    #leftcolumn, #rightcolumn { 
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+#source_div, #destination_div {
+    margin-top: 20px;
+}
+
+select {
+    width: 320px;
+    height: 48px;
+    padding: 0 4em 0 1em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    font-size: 16px; /* not working */
+    padding: 2px;
+    color: #ededed;
+    border: 0;
+    appearance: none;
+    font: inherit;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+option {
+    color: inherit;
+    background-color: #282828; 
+    text-align: center;   
+}
+
+button {
+    margin: 0.5rem;
+    padding-left: 50px;
+    border-radius: 0.8rem;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1.0em 2em;
+    border: transparent;
+    color: #F9F8F9;
+    background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
+    margin-bottom: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(110%);
+    transform: scale(1.05);
+}
+
+#routeDisplay, #stationDisplay, #distanceDisplay {
+    margin-top: 10px;
+    color: #ededed;
+}
+
+#timeDisplay {
+    margin-bottom: 20px;
+    color: #ededed;
+}
+
+#map {
+    height: 500px;
+    max-width: 90%;
+    padding-top: 50px;
+    box-shadow: 0 8px 32px 0 rgba( 73, 97, 220, 0.5 );
+    border-radius: 20px;
+    border: transparent;
+}
