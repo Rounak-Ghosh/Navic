@@ -68,8 +68,79 @@ header{
     text-decoration: none;
 }
 
-#source_div, #destination_div {
-    margin-top: 20px;
+.cta {
+    margin-top: 10vh;
+    height: 33.33%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+  
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+  
+.btn span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+}
+  
+.btn span:hover {
+    color:#2248D1;
+    transition: all 0.3s;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(34, 72, 209, 0.2);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(34, 72, 209, 0.1);
+}
+
+.btn:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(34, 72, 209, 0);
+}
+
+.btn:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(34, 72, 209, 0);
+}
+
+.video_div {
+    margin-top: 10vh;
+    box-shadow: 0px 0px 40px 20px #0c0c0e;
 }
 
 .video {
@@ -77,12 +148,90 @@ header{
     height: auto;
 }
 
-.intro {
-    font-family: "Inter", sans-serif;
+.about_heading {
+    margin-top: 5%;
     font-weight: 800;
     font-size: 64px;
     color: #ffffff;
     text-decoration: none;
-    border: solid 1px red;
-    height: 80px;
+    height: auto;
+    text-align: center;
+}
+
+.about_text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #a0a0ab;
+    text-decoration: none;
+    height: auto;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.center {
+    padding-left: 23%;
+    padding-right: 23%;
+}
+
+.navigator_heading {
+    margin-top: 5%;
+    font-weight: 800;
+    font-size: 64px;
+    color: #ffffff;
+    text-decoration: none;
+    height: auto;
+    text-align: center;
+}
+
+.navigator_text {
+    font-weight: 400;
+    font-size: 18px;
+    color: #a0a0ab;
+    text-decoration: none;
+    height: auto;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.nav_anchor {
+    font-weight: 600;
+    font-size: 20px;
+    color: #2986ff;
+    height: auto;
+}
+
+.a_center {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.img_div {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.img_nav {
+    display: flex;
+    width: 50vw;
+    height: auto;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+.footer_text {
+    font-weight: 200;
+    font-size: 32px;
+    color: #ffffff;
+    height: auto;
 }

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps-web.min.js"></script>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/services/services-web.min.js"></script>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,15 +28,72 @@
       </nav>
     </header>    
     
-    <div class="intro">
-      <p>Sample</p>
+    <div>
+      <p class="about_heading">About this Project</p>
+    </div>
+    <div class="center">
+      <p class="about_text">
+        Your electric vehicles are the present and the future.
+        Range anxiety is the number one reason, after price, why drivers don’t switch to EVs.
+        So, that's why this website came into existence.
+      </p>
     </div>
 
-    <div>
+    <div class="cta" onClick="scrollDown();">
+      <div class="btn">
+        <a></a><span>EXPLORE</span>
+      </div>
+    </div>
+
+    <div class="video_div">
       <video class="video" autoplay muted loop>
         <source src="https://res.cloudinary.com/rghosh/video/upload/v1649697508/Navic/cpo-city-animation_buykdt.mp4" type="video/mp4">
       </video>
     </div>
 
+    <div id="here">
+      <p class="navigator_heading" id="scroll">Worried about range ?</p>
+    </div>
+    <div class="center">
+      <p class="navigator_text">
+        EV journeys can be daunting. How should I charge, and where, or when? 
+        Our navigator will settle all these questions, guiding drivers along a safe and frictionless journey.
+      </p>
+    </div>
+
+    <div class="a_center">
+      <a class="nav_anchor" href="navigator.html" target="_blank">Check out our navigator</a>
+    </div>
+
+    <div class="img_div">
+      <img class="img_nav" src="https://res.cloudinary.com/rghosh/image/upload/v1649856249/Navic/in-car-routing_ldravr.jpg">
+    </div>
+
+    
+    <div>
+      <p class="navigator_heading">What about charging ?</p>
+    </div>
+    <div class="center">
+      <p class="navigator_text">
+        EV drivers need to know where your charge stations are located, and how to get there. 
+        Let's light up the map for our drivers.
+      </p>
+    </div>
+
+    <div class="a_center">
+      <a class="nav_anchor" href="stations.html" target="_blank">Check out our stations locator</a>
+    </div>
+
+    <div class="img_div">
+      <img class="img_nav" src="https://res.cloudinary.com/rghosh/image/upload/v1649857240/Navic/fleet-charging_hy4fte.jpg">
+    </div>
+
+    <div class="footer">
+      <a class="footer_text" href="https://rounak-ghosh.github.io/" target="_blank">Made with love by Rounak Ghosh &#128151;</a>
+    </div>
+
   </body>
+
+  <script src="home.js" type="text/javascript"></script>
+
 </html>
