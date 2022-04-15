@@ -487,7 +487,7 @@ const locateCurrentPosition = () => new Promise((resolve,reject)=> {
       },
       {
         enableHighAccuracy: true,
-        timeout: 5000
+        timeout: 50000
       }
     );
 });
