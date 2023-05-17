@@ -1,4 +1,4 @@
-## Getting Started
+## About the project
 
 Go to the website & explore : [https://rounak-ghosh.github.io/Navic/](https://rounak-ghosh.github.io/Navic/)
 
